@@ -1,0 +1,40 @@
+<div class="container">
+  
+  <div class="row">
+    <div class="col">
+        <table class="table">
+          <thead>
+          <tr>
+            <th>Id</th>
+            <th>User</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <!--<th>Password</th>-->
+            <th>Gender</th>
+            <th>Edit</th>
+            <th>Delete</th>
+          </tr>
+          </thead>
+         
+          <tr *ngFor="let user of users">
+            <td scope="row">{{user.id}}</td>
+            <td scope="row">{{user.user}}</td>
+            <td scope="row">{{user.firstName}}</td>
+            <td scope="row">{{user.lastName}}</td>
+            <td scope="row">{{user.email}}</td>
+            <!--<td scope="row">{{user.password}}</td>-->
+            <td scope="row">{{user.gender}}</td>
+            <td scope="row"><button type="submit" name="edit" value="Edit" class=" btn btn-primary" (click)="editUser(user.id)"><i class="glyphicon glyphicon-pencil"></i></button></td>
+            <td scope="row"><button type="submit" name="edit" value="Edit" class="btn btn-danger" (click)="deleteUser(user.id)" ><i class="glyphicon glyphicon-trash"></i></button></td>
+          </tr>
+        </table>
+    </div>
+  </div>
+  <div class="form-group">        
+    <div class="col-sm-5">
+      <button type="Submit" class="btn btn-primary" routerLink="/login1" >Login</button>
+      <button type="Submit" class="btn btn-primary" routerLink="/register1" >Register</button>
+    </div>
+  </div>
+</div>
